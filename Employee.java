@@ -1,12 +1,14 @@
-
 public class Employee {
-    // Member variables
+    // Fields
     private int empId;
     private String empName;
     private int empAge;
     private double empSalary;
 
-    // Constructor
+    // Default constructor
+    public Employee() {}
+
+    // Parameterized constructor
     public Employee(int empId, String empName, int empAge, double empSalary) {
         this.empId = empId;
         this.empName = empName;
@@ -14,21 +16,37 @@ public class Employee {
         this.empSalary = empSalary;
     }
 
-    // Getter methods
+    // Getter and Setter methods
     public int getEmpId() {
         return empId;
+    }
+
+    public void setEmpId(int empId) {
+        this.empId = empId;
     }
 
     public String getEmpName() {
         return empName;
     }
 
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
     public int getEmpAge() {
         return empAge;
     }
 
+    public void setEmpAge(int empAge) {
+        this.empAge = empAge;
+    }
+
     public double getEmpSalary() {
         return empSalary;
+    }
+
+    public void setEmpSalary(double empSalary) {
+        this.empSalary = empSalary;
     }
 
     // Method to display employee details
@@ -37,29 +55,14 @@ public class Employee {
         System.out.println("Employee Name: " + empName);
         System.out.println("Employee Age: " + empAge);
         System.out.println("Employee Salary: " + empSalary);
-        System.out.println(); // Added for better formatting
     }
 
+    // Main method to test the class
     public static void main(String[] args) {
-        // Creating and displaying multiple Employee objects
-        Employee employee1 = new Employee(1, "Aditi Zanje", 24, 50000.00);
-        Employee employee2 = new Employee(2, "Anuja Sakunkhe", 26, 54000.00);
-        
-        System.out.println("Employee Details:");
-        employee1.displayEmployeeDetails();
-        employee2.displayEmployeeDetails();
+        // Create Employee object using parameterized constructor
+        Employee employee = new Employee(101, "John Doe", 30, 50000.75);
+
+        // Display employee details
+        employee.displayEmployeeDetails();
     }
 }
-/*
- * Employee Details:
-Employee ID: 1
-Employee Name: Aditi Zanje
-Employee Age: 24
-Employee Salary: 50000.0
-
-Employee ID: 2
-Employee Name: Anuja Sakunkhe
-Employee Age: 26
-Employee Salary: 54000.0
-
-*/
